@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  mysql:
+    hostname: project-hostname
+    image: mysql
+    container_name: root
+    volumes:
+      - db_prod:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+    ports:
+      - 3306:3306
+    networks:
+      - prod_netw
+
+networks:
+  prod_netw:
+volumes:
+  db_prod:
+
