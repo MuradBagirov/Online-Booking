@@ -22,20 +22,20 @@ public class UserController {
     }
 
     @PostMapping
-    public UserDto create(@RequestParam Long flightId, @RequestBody UserDto airportDto) {
-        return userService.create(flightId, airportDto);
+    public UserDto create(@RequestParam Long flightId,@RequestBody UserDto airportDto) {
+        return userService.create(flightId,airportDto);
     }
 
     @PutMapping
-    public UserDto update(@RequestBody UserDto airportDto) {
+    public UserDto update(@RequestBody UserDto airportDto){
         return userService.update(airportDto);
     }
 
     @DeleteMapping
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable Long id){
         userService.delete(id);
     }
 
-}
+    }
 
 

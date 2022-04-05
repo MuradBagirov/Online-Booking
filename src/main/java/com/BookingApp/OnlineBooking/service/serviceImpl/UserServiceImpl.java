@@ -5,6 +5,7 @@ import com.BookingApp.OnlineBooking.mapper.UserMapper;
 import com.BookingApp.OnlineBooking.model.BookingFlights;
 import com.BookingApp.OnlineBooking.model.Flights;
 import com.BookingApp.OnlineBooking.model.User;
+import com.BookingApp.OnlineBooking.repository.BookingFlightsRepository;
 import com.BookingApp.OnlineBooking.repository.FlightsRepository;
 import com.BookingApp.OnlineBooking.repository.UserRepository;
 import com.BookingApp.OnlineBooking.service.UserService;

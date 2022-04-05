@@ -23,10 +23,10 @@ public class FlightsController {
     }
 
     @GetMapping("/filter")
-    public List<FlightsDto> findByCityAndFlightDateEquals(@RequestParam String city,
-                                                          @RequestParam String flightDate) {
+    public List <FlightsDto> findByCityAndFlightDateEquals(@RequestParam String city,
+                                                           @RequestParam String flightDate) {
 
-        return flightsService.findByCityAndFlightDateEquals(city, flightDate);
+        return flightsService.findByCityAndFlightDateEquals(city,flightDate);
     }
 
 

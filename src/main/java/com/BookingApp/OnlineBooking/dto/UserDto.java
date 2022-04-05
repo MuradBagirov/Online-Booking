@@ -13,12 +13,12 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserDto {
 
-    Long id;
+        Long id;
 
-    String firstName;
+        String firstName;
 
-    String lastName;
+        String lastName;
 
-    List<BookingFlights> bookingFlightsList;
+        List<BookingFlights> bookingFlightsList;
 
 }
