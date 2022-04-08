@@ -31,7 +31,7 @@ public class FlightsController {
 
 
     @PostMapping
-    public FlightsDto create(@RequestBody FlightsDto flightsDto) {
+    public FlightsDto create( @RequestBody FlightsDto flightsDto) {
         return flightsService.create(flightsDto);
     }
 

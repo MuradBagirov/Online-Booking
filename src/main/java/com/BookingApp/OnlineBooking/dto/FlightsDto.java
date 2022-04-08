@@ -18,7 +18,7 @@ public class FlightsDto {
 
     LocalDate flightDate;
 
-    String FlightTime;
+    String flightTime;
 
     String destinationPoint;
 
@@ -27,4 +27,9 @@ public class FlightsDto {
     String airportName;
 
     Long freeSeats;
+
+    public FlightsDto(FlightsDto flightsDto) {
+
+
+    }
 }

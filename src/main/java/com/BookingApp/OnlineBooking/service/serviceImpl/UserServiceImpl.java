@@ -5,7 +5,6 @@ import com.BookingApp.OnlineBooking.mapper.UserMapper;
 import com.BookingApp.OnlineBooking.model.BookingFlights;
 import com.BookingApp.OnlineBooking.model.Flights;
 import com.BookingApp.OnlineBooking.model.User;
-import com.BookingApp.OnlineBooking.repository.BookingFlightsRepository;
 import com.BookingApp.OnlineBooking.repository.FlightsRepository;
 import com.BookingApp.OnlineBooking.repository.UserRepository;
 import com.BookingApp.OnlineBooking.service.UserService;
@@ -41,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
         Long collect = userDto.getBookingFlightsList().stream().mapToLong(BookingFlights::getFreeSeats).sum();
 
-        Long stock = flights.getFreeSeats() - 1;
+        Long stock = flights.getFreeSeats() - collect;
 
         if (flights.getFreeSeats() > collect) {
             flights.setFreeSeats(stock);

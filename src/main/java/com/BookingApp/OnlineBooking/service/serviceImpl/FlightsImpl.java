@@ -31,8 +31,8 @@ public class FlightsImpl implements FlightsService {
     }
 
     @Override
-    public FlightsDto create(FlightsDto airportDto) {
-        Flights flights = modelMapper.map(airportDto, Flights.class);
+    public FlightsDto create(FlightsDto flightsDto) {
+        Flights flights = modelMapper.map(flightsDto, Flights.class);
         Flights save = flightsRepository.save(flights);
         return modelMapper.map(save, FlightsDto.class);
     }
@@ -42,10 +42,7 @@ public class FlightsImpl implements FlightsService {
         Flights flights = flightsRepository.findById(airportDto.getId()).orElseThrow(() -> new RuntimeException("User not found"));
         flights.setAirportName(airportDto.getAirportName());
         flights.setCity(airportDto.getCity());
-
-        Flights save = flightsRepository.save(flights);
-
-        return modelMapper.map(save, FlightsDto.class);
+        return modelMapper.map(flightsRepository.save(flights), FlightsDto.class);
 
     }
 
